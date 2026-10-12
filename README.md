@@ -43,7 +43,7 @@ Ping Identity Agent Plugins give AI coding agents deep knowledge of the Ping Ide
 > Product/solution specific plugins, such as
 **`ping-identity-pingone`** and
 **`ping-identity-pingone-aic`**
-**`ping-identity-migration`** (application-level migration off PingFederate, PingAM, or PingOne for Enterprise) — providing instructions scoped to individual products and use cases.
+**`ping-identity-migration`** (application-level migration off PingFederate or PingOne for Enterprise) — providing instructions scoped to individual products and use cases.
 
 ---
 

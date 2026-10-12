@@ -119,7 +119,7 @@
       "name": "ping-identity-migration",
       "displayName": "Ping Identity Migration",
       "source": "./plugins/ping-identity-migration",
-      "description": "Application-level identity migration guidance. Migrates OAuth clients, SAML connections, access token managers, signing keys, and IdP connections from PingFederate, PingAM, or PingOne for Enterprise to PingOne or PingOne Advanced Identity Cloud — bundled orchestrator for extract, classify, apply, and validate, plus assessment, wave planning, cutover, post-migration secret handling, and rollback.",
+      "description": "Application-level identity migration guidance. Migrates OAuth clients, SAML connections, access token managers, signing keys, and IdP connections from PingFederate or PingOne for Enterprise to PingOne or PingOne Advanced Identity Cloud — bundled orchestrator for extract, classify, apply, and validate, plus assessment, wave planning, cutover, post-migration secret handling, and rollback.",
       "version": "1.0.0",
       "author": {
         "name": "Ping Identity",
