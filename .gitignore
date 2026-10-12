@@ -27,6 +27,10 @@ HELIX-SETUP.md
 helix-*.md
 docs/
 
+# Python
+__pycache__/
+*.py[cod]
+
 # Secrets and local config
 *.local.json
 .mcp.json

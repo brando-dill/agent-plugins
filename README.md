@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Ping Identity Agent Plugins give AI coding agents deep knowledge of the Ping Identity platform through purpose-built skills for platform foundations, flow and journey design, execution troubleshooting, and application integration. These skills help take the burden off you having to prompt-engineer Ping context. 
+Ping Identity Agent Plugins give AI coding agents deep knowledge of the Ping Identity platform through purpose-built skills for platform foundations, flow and journey design, execution troubleshooting, and application integration. These skills help take the burden off you having to prompt-engineer Ping context.
 
 > [!NOTE]
 > Plugins are being updated periodically. Check back here for updates!
@@ -37,10 +37,13 @@ Ping Identity Agent Plugins give AI coding agents deep knowledge of the Ping Ide
 
 > [!IMPORTANT]
 > This marketplace distributes different plugin surfaces:
-> - **`ping-identity-quickstart`**: human-facing front door for platform detection, orientation, and routing.
-> - **`ping-identity`**: cross-portfolio plugin containing the ping-identity foundations skill with portfolio reference topics.
-> - **`ping-orchestration-sdks`**: companion SDK plugin sourced from [`pingidentity/ping-sdk-agent-skills`](https://github.com/pingidentity/ping-sdk-agent-skills), with deep client-side integration skills when you need to embed PingOne AIC/PingAM journeys (trees) or PingOne DaVinci into your mobile and web apps.
-> Product/solution specific plugins, such as **`ping-identity-pingone`** and **`ping-identity-pingone-aic`** — providing instructions scoped to individual products and use cases.
+> - **`ping-identity-quickstart`** — human-facing front door for platform detection, orientation, and routing.
+> - **`ping-identity`** — cross-portfolio plugin containing the ping-identity foundations skill with portfolio reference topics.
+> - **`ping-orchestration-sdks`** — companion SDK plugin sourced from [`pingidentity/ping-sdk-agent-skills`](https://github.com/pingidentity/ping-sdk-agent-skills), with deep client-side integration skills when you need to embed PingOne AIC/PingAM journeys (trees) or PingOne DaVinci into your mobile and web apps.
+> Product/solution specific plugins, such as
+**`ping-identity-pingone`** and
+**`ping-identity-pingone-aic`**
+**`ping-identity-migration`** (application-level migration off PingFederate, PingAM, or PingOne for Enterprise) — providing instructions scoped to individual products and use cases.
 
 ---
 
@@ -65,6 +68,7 @@ npx skills add pingidentity/agent-plugins/plugins/ping-identity-quickstart
 npx skills add pingidentity/agent-plugins/plugins/ping-identity
 npx skills add pingidentity/agent-plugins/plugins/ping-identity-pingone
 npx skills add pingidentity/agent-plugins/plugins/ping-identity-pingone-aic
+npx skills add pingidentity/agent-plugins/plugins/ping-identity-migration
 ```
 
 > [!TIP]
@@ -113,6 +117,12 @@ Where available, certain skills in plugins reference the Ping CLI to perform exe
 | `aic-journey-design` | Designs and builds AIC journeys and PingAM authentication trees — node selection, wiring invariants, risk/MFA/passkey/recovery journeys — creating and updating journeys through AIC MCP tools when connected | You are building login, registration, recovery, MFA, step-up, passwordless, or social-login journeys in AIC or PingAM |
 | `aic-app-integration` | Implements app-side integration against PingOne Advanced Identity Cloud (AIC) — Journey modules and journey client for Android/iOS/JavaScript, journey callbacks, OIDC/PKCE, tenant CORS, SAML, and app-side troubleshooting | You are integrating an Android, iOS, JavaScript/React, or backend app with AIC or PingAM |
 
+### `ping-identity-migration` (product-specific, agent-facing)
+
+| Skill | What it does | Use when... |
+|---|---|---|
+| `ping-migration` | Runs application-level migrations from PingFederate or PingOne for Enterprise to PingOne — bundled orchestrator for extract/classify/apply/validate, classification rules, assessment and wave planning, cutover, post-migration secret handling, and rollback | You are moving identity applications off a source platform, assessing migration readiness, planning waves and cutover, or rolling back a migration run |
+
 ### Companion plugin
 
 - **`ping-orchestration-sdks`** — deep Android (Kotlin), iOS (Swift), and React/JavaScript SDK scaffolding and client-side integration guidance. It is sourced from [`pingidentity/ping-sdk-agent-skills`](https://github.com/pingidentity/ping-sdk-agent-skills), not stored under this repository's `plugins/` directory.
@@ -138,6 +148,7 @@ The quickstart skill routes orientation requests to the cross-portfolio plugin. 
 | 11 | "Create a new login journey in my AIC sandbox that collects username and password, then sends an email OTP." | ping-identity-pingone-aic / aic-journey-design + MCP |
 | 12 | "Migrate our on-prem PingAM authentication trees into AIC and modernize the orchestration design." | ping-identity-pingone-aic / aic-journey-design |
 | 13 | "Set up an Active Directory integration and determine which Ping service should own user synchronization." | ping-identity / ping-identity |
+| 14 | "Run a migration of our PingFederate OAuth clients to PingOne and tell me which apps can't move directly." | ping-identity-migration / ping-migration |
 
 Prompts marked "+ MCP" work best with the relevant Ping MCP execution tools connected. Without them, the design skills return a design or implementation artifact rather than performing live tenant changes.
 

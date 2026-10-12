@@ -1,0 +1,22 @@
+{
+  "name": "ping-identity-migration",
+  "version": "1.0.0",
+  "description": "Agent plugin for application-level identity migration. Migrates OAuth clients, SAML connections, and IdP connections from PingFederate, or PingOne for Enterprise to PingOne or  — bundled orchestrator for extract, classify, apply, and validate, plus assessment, wave planning, cutover, post-migration secret handling, and rollback.",
+  "author": {
+    "name": "Ping Identity",
+    "email": "devex@pingidentity.com",
+    "url": "https://www.pingidentity.com"
+  },
+  "homepage": "https://developer.pingidentity.com",
+  "repository": "https://github.com/pingidentity/agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "ping",
+    "pingone",
+    "pingfederate",
+    "migration",
+    "cutover",
+    "rollback",
+    "identity"
+  ]
+}
