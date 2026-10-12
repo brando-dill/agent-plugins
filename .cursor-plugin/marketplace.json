@@ -1,7 +1,9 @@
 {
   "name": "ping-identity",
-  "owner": { "name": "Ping Identity" },
-  "description": "Agent plugins for Ping Identity — human-facing quickstart, cross-portfolio dispatcher, and product-specific plugins.",
+  "owner": {
+    "name": "Ping Identity"
+  },
+  "description": "Agent plugins for Ping Identity - human-facing quickstart, cross-portfolio dispatcher, and product-specific plugins.",
   "plugins": [
     {
       "name": "ping-identity-quickstart",
@@ -18,6 +20,10 @@
     {
       "name": "ping-identity-pingone-aic",
       "source": "./plugins/ping-identity-pingone-aic"
+    },
+    {
+      "name": "ping-identity-migration",
+      "source": "./plugins/ping-identity-migration"
     },
     {
       "name": "ping-orchestration-sdks",
